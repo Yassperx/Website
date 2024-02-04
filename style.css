@@ -1,3 +1,39 @@
-* {
-    background-color: black;
-}
+body {
+    margin: 0;
+    height: 100vh; /* Ensure body fills the viewport height */
+    background-image: url("images/Background.jpg"); /* Set background image */
+    background-size: cover; /* Make it cover the entire viewport */
+    background-position: center; /* Center the image */
+  }
+  
+  /* Remove unnecessary top image styles */
+  .top_image {
+    display: none; /* Hide the top image element */
+  }
+  /* Position and style the circle container */
+  .circle-container {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust right offset as needed */
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFF; /* Add a black border of 2px width */
+  }
+  
+  .big-text {
+    font-size: 3em;
+    text-align: center;
+    font-family: fantasy;
+    color: white;
+    text-shadow: 1px 1px 2px pink;
+  }
