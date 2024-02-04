@@ -23,8 +23,8 @@ body {
   }
   
   .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #FFF; /* Add a black border of 2px width */
@@ -37,3 +37,99 @@ body {
     color: white;
     text-shadow: 1px 1px 2px pink;
   }
+
+
+  nav {
+    position: fixed; /* Fix the navbar to the top */
+    top: 4%; /* Place it at the top of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Shift left to compensate for centering */
+    background-color: white;
+    border-radius: 10px; /* Round corners */
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Ensure navbar stays on top of content */
+    /* Reduce the size of the navbar */
+    height: 40px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.5em; /* Reduce font size slightly */
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .social-icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin: 0 5px; /* Reduce spacing between icons */
+  }
+  
+  .social-icons a {
+    font-family: monospace; /* Set monospace font */
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .social-icons a:hover {
+    text-shadow: 0 0 3px #333; /* Subtle hover shadow */
+  }
+  
+  /* Individual colors for each icon */
+  .social-icons li:nth-child(1) a:hover {
+    color: #ff4646; /* Instagram orange */
+  }
+  
+  .social-icons li:nth-child(2) a:hover {
+    color: #37ff80; /* WhatsApp blue */
+  }
+  
+  .social-icons li:nth-child(3) a:hover {
+    color: #3a5591; /* Facebook blue */
+  }
+  
+  .social-icons li:nth-child(4) a:hover {
+    color: #3d67ff; /* Discord purple */
+  }
+  .wtsp {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: black;
+  }
+  .wtsp::after {
+    content: " ";
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #ccc;
+  }
+  
+.social-icons li:nth-child(2) a:hover .wtsp {
+    display: block;
+  }
+  
